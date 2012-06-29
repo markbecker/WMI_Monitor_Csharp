@@ -391,8 +391,8 @@ namespace WMI_Monitor_Csharp
             fanspeed.Text = fanspeedStr;
             fanspeedmax.Text = fanspeedmaxStr;
             if (gpumemStr.Length <= 0) { gpumem.Text = "Memory:  " + ((gpumemnum / 1024) / 1024).ToString("F0") + " MB"; gpu2pb.Visible = false; }
-            if (cpuCount < 4) { cpu4pb.Visible = false; }
-            if (cpuCount < 3) { cpu3pb.Visible = false; }
+            cpu4pb.Visible = (cpuCount >= 4);
+            cpu3pb.Visible = (cpuCount >= 3);
         }
 
         private void runOpenHardwareMonitor_Hardware()
