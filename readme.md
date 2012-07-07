@@ -1,13 +1,14 @@
-<h1>WMI_Monitor_Csharp</h1><br /><br />
+<h1>WMI_Monitor_Csharp</h1><br />
+<br />
 A "System Monitor" project using "WMI" and "Open Hardware Monitor".<br />
 Written in C-sharp by Mark Becker<br />
-<br /><br />
+<br />
 <b>Features:</b><br />
 o Standalone application<br />
 o Short and Long Form <br />
 o Low processor usage<br />
 o Simple to use<br />
-<br /><br />
+<br />
 <b>Development Purpose</b><br />
 Needed better, light weight, set of system monitors used during application<br /> 
 development.
@@ -15,7 +16,7 @@ Windows gadgets were not complete enough.<br />
 <br />
 Explore C# application development in Visual Studio 2010.<br />
 Explore using WMI and Open Hardware Monitor.<br />
-<br /><br />
+<br />
 <b>Developed and tested on...</b><br />
 <br />
 Desktop:<br />
@@ -29,7 +30,7 @@ Lenovo ThinkPad T61<br />
 OS - Windows 7 Professional 64-bit<br />
 CPU - Intel Core 2 Duo T7500<br />
 VC - NVIDIA Quadro NVS 140M<br />
-<br /><br />
+<br />
 WMI: http://msdn.microsoft.com/en-us/library/aa393964(v=vs.85)<br />
 Windows Management Instrumentation (WMI) is the infrastructure for management <br />
 data and operations on Windows-based operating systems. You can write WMI <br />
@@ -41,7 +42,7 @@ Operations Manager (MOM), or Windows Remote Management <br />
 Open Hardware Monitor: http://openhardwaremonitor.org/<br />
 The Open Hardware Monitor is a free open source software that monitors <br />
 temperature sensors, fan speeds, voltages, load and clock speeds of a computer.<br />
-<br /><br />
+<br />
 <b>To Install...</b><br />
 <br />
 Both "WMI_Monitor_Csharp" and "Open Hardware Monitor" are stand-alone <br />
@@ -58,5 +59,3 @@ Adjust and recompile if using a 32 bit system.<br />
 o Windows OS<br />
 o Open Hardware Monitor running in background<br />
 o WMI is already installed in Windows systems<br />
-
-================================================================================
