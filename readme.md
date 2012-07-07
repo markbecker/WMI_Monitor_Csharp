@@ -1,3 +1,4 @@
+<table><tr><td valign="top">
 <h1>WMI_Monitor_Csharp</h1>
 A "System Monitor" project using "WMI" and "Open Hardware Monitor".<br />
 Written in C-sharp by Mark Becker
@@ -59,3 +60,8 @@ temperature sensors, fan speeds, voltages, load and clock speeds of a computer.<
 <li>Open Hardware Monitor running in background
 <li>WMI is already installed in Windows systems
 </ul></ul><br/><br/>
+</td>
+<td valign="top">
+<img border=1 src="https://github.com/markbecker/WMI_Monitor_Csharp/raw/master/screenshot_small.png" alt="Screenshot 1"/><br /><br />
+<img border=1 src="https://github.com/markbecker/WMI_Monitor_Csharp/raw/master/screenshot2_small.png" alt="Screenshot 2"/>
+</td></tr></table>
