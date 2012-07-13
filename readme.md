@@ -5,6 +5,7 @@ Written in C-sharp by Mark Becker
 <hr>
 <ul>
 <font size='4'><b>Features</b></font><ul>
+<li>Starts in sytem tray
 <li>Standalone application
 <li>Short and Long Form
 <li>Low processor usage
