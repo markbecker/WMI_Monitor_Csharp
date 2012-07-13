@@ -23,7 +23,7 @@ namespace WMI_Monitor_Csharp
         String osramusedStr, osramsizeStr, osramfreeprctStr;
         String systemnameStr;
         String systemipStr;
-        int cputotalpbNum, cpuCount, cntr, gpu1pbNum, osramfreeprctNUM;
+        int cputotalpbNum, cpuCount, cntr, gpu1pbNum, osramfreeprctNUM, xPos, yPos;
         Control pb;
         List<XY> chartXY;
         Boolean redrawForm = true;
@@ -42,13 +42,15 @@ namespace WMI_Monitor_Csharp
         float minuteEndPointX, minuteEndPointY;
         float secondEndPointX, secondEndPointY;
 
-        public FormShort()
+        public FormShort(int xPosInit, int yPosInit)
         {
             InitializeComponent();
-
+            this.Hide();
             //=================================================== 
             // Setup stuff
             //===================================================
+            xPos = xPosInit;
+            yPos = yPosInit;
             addButtonListeners();
             clearFormTextLabels();
             clearFormTempStrings();
@@ -125,8 +127,10 @@ namespace WMI_Monitor_Csharp
 
         private void startupLocation()
         {
-            this.Top = 0;
-            this.Left = Screen.PrimaryScreen.WorkingArea.Width - this.Width - 10;
+            this.Top = yPos;
+            this.Left = xPos;
+            //this.Top = 0;
+            //this.Left = Screen.PrimaryScreen.WorkingArea.Width - this.Width - 10;
         }
         
         private void addFormListeners()
@@ -478,7 +482,7 @@ namespace WMI_Monitor_Csharp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.Show();
         }
 
         private void buttonLongForm_MouseEnter(object sender, EventArgs e)
@@ -500,14 +504,61 @@ namespace WMI_Monitor_Csharp
 
         public void ThreadProc()
         {
-            FormLong f = new FormLong();
-            f.SetDesktopLocation(this.Location.X, this.Location.Y);
+            xPos = this.Location.X;
+            yPos = this.Location.Y;
+            FormLong f = new FormLong(xPos, yPos);
+            //f.SetDesktopLocation(this.Location.X, this.Location.Y);
             Application.Run(f);
         }
 
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012");
+        }
+
+        private void FormShort_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+                ShowInTaskbar = false;
+            } else if (WindowState != FormWindowState.Minimized)
+            {
+                Show();
+                ShowInTaskbar = false;
+            }
+        }
+
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+        }
+
+        private void toolStripMenuItemShowHide_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+            }
+            else if (WindowState != FormWindowState.Minimized)
+            {
+                this.Hide();
+                this.WindowState = FormWindowState.Minimized;
+            }
+            this.ShowInTaskbar = false;
+        }
+
+        private void toolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            int exitcodeint = 0;
+            Environment.Exit(exitcodeint);
+        }
+
+        private void toolStripMenuItemGoToLong_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
+            t.Start();
+            this.Close(); 
         }
 
         //added to make dragable button

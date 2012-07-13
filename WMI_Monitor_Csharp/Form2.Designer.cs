@@ -87,6 +87,12 @@
             this.timerFast = new System.Windows.Forms.Timer(this.components);
             this.timerSlow = new System.Windows.Forms.Timer(this.components);
             this.toolTipButton = new System.Windows.Forms.ToolTip(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItemGoToLong = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemShowHide = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -96,6 +102,7 @@
             this.splitContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cpucorename
@@ -797,6 +804,50 @@
             this.timerSlow.Interval = 10000;
             this.timerSlow.Tick += new System.EventHandler(this.timerSlow_Tick);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "WMI_Monitor_Csahrp";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemGoToLong,
+            this.toolStripSeparator1,
+            this.toolStripMenuItemShowHide,
+            this.toolStripMenuItemExit});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(168, 98);
+            // 
+            // toolStripMenuItemGoToLong
+            // 
+            this.toolStripMenuItemGoToLong.Name = "toolStripMenuItemGoToLong";
+            this.toolStripMenuItemGoToLong.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItemGoToLong.Text = "Go To Long Form";
+            this.toolStripMenuItemGoToLong.Click += new System.EventHandler(this.toolStripMenuItemGoToLong_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(164, 6);
+            // 
+            // toolStripMenuItemShowHide
+            // 
+            this.toolStripMenuItemShowHide.Name = "toolStripMenuItemShowHide";
+            this.toolStripMenuItemShowHide.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItemShowHide.Text = "Show/Hide";
+            this.toolStripMenuItemShowHide.Click += new System.EventHandler(this.toolStripMenuItemShowHide_Click);
+            // 
+            // toolStripMenuItemExit
+            // 
+            this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
+            this.toolStripMenuItemExit.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItemExit.Text = "Exit";
+            this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
+            // 
             // FormShort
             // 
             this.AccessibleName = "FormShort";
@@ -807,11 +858,12 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(248, 435);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(1080, 0);
+            this.Location = new System.Drawing.Point(1680, 0);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "FormShort";
             this.Padding = new System.Windows.Forms.Padding(5);
@@ -819,6 +871,7 @@
             this.Text = "System Info Short";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.FormShort_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -830,6 +883,7 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -889,6 +943,12 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer6;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
         private System.Windows.Forms.Button buttonMin;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemShowHide;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExit;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemGoToLong;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 
     }
 }

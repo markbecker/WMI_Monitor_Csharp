@@ -26,7 +26,7 @@ namespace WMI_Monitor_Csharp
         String fannameStr, fanspeedStr, fanspeedmaxStr;
         String systemnameStr;
         String systemipStr, systemuptimeStr;
-        int cputotalpbNum, cpuCount, cntr, gpu1pbNum, gpu2pbNum, osramfreeprctNUM;
+        int cputotalpbNum, cpuCount, cntr, gpu1pbNum, gpu2pbNum, osramfreeprctNUM, xPos, yPos;
         UInt32 gpumemnum;
         Control pb;
         List<XY> chartXY;
@@ -46,15 +46,17 @@ namespace WMI_Monitor_Csharp
         float minuteEndPointX, minuteEndPointY;
         float secondEndPointX, secondEndPointY;
 
-        public FormLong()
+        public FormLong(int xPosInit, int yPosInit)
         {
             InitializeComponent();
-
+            this.Hide();
             //=================================================== 
             // Setup stuff
             //===================================================
 
             this.ResizeRedraw = true;
+            xPos = xPosInit;
+            yPos = yPosInit;
             addButtonListeners();
             clearFormTextLabels();
             clearFormTempStrings();
@@ -140,8 +142,10 @@ namespace WMI_Monitor_Csharp
 
         private void startupLocation()
         {
-            this.Top = 0;
-            this.Left = Screen.PrimaryScreen.WorkingArea.Width - this.Width - 10;
+            this.Top = yPos;
+            this.Left = xPos;
+            //this.Top = 0;
+            //this.Left = Screen.PrimaryScreen.WorkingArea.Width - this.Width - 10;
         }
 
         private void addFormListeners()
@@ -706,7 +710,7 @@ namespace WMI_Monitor_Csharp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.Show();
         }
 
         private void buttonShortForm_MouseEnter(object sender, EventArgs e)
@@ -728,15 +732,61 @@ namespace WMI_Monitor_Csharp
 
         public void ThreadProc()
         {
-            FormShort f = new FormShort();
-            f.SetDesktopLocation(this.Location.X, this.Location.Y);
+            xPos = this.Location.X;
+            yPos = this.Location.Y;
+            FormShort f = new FormShort(xPos, yPos);
+            //f.SetDesktopLocation(this.Location.X, this.Location.Y);
             Application.Run(f);
         }
 
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012");
+        } 
+
+        private void FormLong_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                this.Hide();
+            } else if (WindowState != FormWindowState.Minimized)
+            {
+                this.Show();
+            }
+            this.ShowInTaskbar = false;
         }
+
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+        }
+
+        private void toolStripMenuItemShowHide_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+            }
+            else if (WindowState != FormWindowState.Minimized)
+            {
+                this.Hide();
+                this.WindowState = FormWindowState.Minimized;
+            }
+            this.ShowInTaskbar = false;
+        }
+
+        private void toolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            int exitcodeint = 0;
+            Environment.Exit(exitcodeint);
+        }
+
+        private void toolStripMenuItemGoToShort_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
+            t.Start();
+            this.Close();   
+        }     
         
         //added to make dragable button
         // from http:// www.codeproject.com/Articles/11114/Move-window-form-without-Titlebar-in-C
@@ -763,6 +813,6 @@ namespace WMI_Monitor_Csharp
                 return cp;
             }
         }
-        // done added        
+        // done added  
     }
 }

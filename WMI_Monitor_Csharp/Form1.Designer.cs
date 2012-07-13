@@ -127,6 +127,12 @@
             this.fanname = new System.Windows.Forms.Label();
             this.shapeContainer10 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape8 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItemShowHide1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemGoToShort = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -142,6 +148,7 @@
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timerFast
@@ -1343,6 +1350,50 @@
             this.rectangleShape8.Name = "rectangleShape8";
             this.rectangleShape8.Size = new System.Drawing.Size(227, 33);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "WMI_Monitor_Csahrp";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemGoToShort,
+            this.toolStripSeparator1,
+            this.toolStripMenuItemShowHide1,
+            this.toolStripMenuItemExit});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(169, 98);
+            // 
+            // toolStripMenuItemShowHide1
+            // 
+            this.toolStripMenuItemShowHide1.Name = "toolStripMenuItemShowHide1";
+            this.toolStripMenuItemShowHide1.Size = new System.Drawing.Size(168, 22);
+            this.toolStripMenuItemShowHide1.Text = "Show/Hide";
+            this.toolStripMenuItemShowHide1.Click += new System.EventHandler(this.toolStripMenuItemShowHide_Click);
+            // 
+            // toolStripMenuItemExit
+            // 
+            this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
+            this.toolStripMenuItemExit.Size = new System.Drawing.Size(168, 22);
+            this.toolStripMenuItemExit.Text = "Exit";
+            this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
+            // 
+            // toolStripMenuItemGoToShort
+            // 
+            this.toolStripMenuItemGoToShort.Name = "toolStripMenuItemGoToShort";
+            this.toolStripMenuItemGoToShort.Size = new System.Drawing.Size(168, 22);
+            this.toolStripMenuItemGoToShort.Text = "Go To Short Form";
+            this.toolStripMenuItemGoToShort.Click += new System.EventHandler(this.toolStripMenuItemGoToShort_Click);
+            // 
             // FormLong
             // 
             this.AccessibleName = "FormLong";
@@ -1365,6 +1416,7 @@
             this.Text = "System Info Long";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.FormLong_Resize);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -1386,6 +1438,7 @@
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1485,6 +1538,12 @@
         private System.Windows.Forms.Label gpumem;
         private System.Windows.Forms.ProgressBar gpu2pb;
         private System.Windows.Forms.Label gpumemperc;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemShowHide1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExit;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemGoToShort;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 
     }
 }
