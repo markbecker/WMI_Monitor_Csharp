@@ -16,7 +16,8 @@ namespace WMI_Monitor_Csharp
         {
             //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormShort(1680, 0));
+            int xPos = Screen.PrimaryScreen.WorkingArea.Width - 245;
+            Application.Run(new FormShort(xPos, 0));
         }
     } 
 }
