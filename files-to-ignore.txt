@@ -1,0 +1,3 @@
+..\Misc Projects\WMI_Monitor_Csharp\WMI_Monitor_Csharp\obj (entire folder)
+..\Misc Projects\WMI_Monitor_Csharp\WMI_Monitor_Csharp\bin (entire folder)
+..\Misc Projects\WMI_Monitor_Csharp\WMI_Monitor_Csharp.suo
