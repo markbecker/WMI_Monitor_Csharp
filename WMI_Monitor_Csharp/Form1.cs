@@ -71,7 +71,7 @@ namespace WMI_Monitor_Csharp
             runWMI_Win32_OperatingSystem();
             runWMI_Win32_PhysicalMemory();
             runWMI_Win32_NetworkAdapterConfiguration();
-            runWin32_PerfFormattedData_PerfProc_Process();
+            //runWin32_PerfFormattedData_PerfProc_Process(); //Mohammad Yaser Ammar: third problem
             addFormListeners();
             startupLocation();
             resizeFormBackground();
@@ -126,7 +126,7 @@ namespace WMI_Monitor_Csharp
             runWMI_Win32_OperatingSystem();
             runOpenHardwareMonitor_Sensor();
             runOpenHardwareMonitor_Hardware();
-            runWin32_PerfFormattedData_PerfProc_Process();
+            //runWin32_PerfFormattedData_PerfProc_Process(); //Mohammad Yaser Ammar: third problem
             updateChartInfo();
             if (redrawForm) { resizeFormBackground(); }
         }
@@ -533,7 +533,7 @@ namespace WMI_Monitor_Csharp
             String outStr = "";
             String outMaxStr = "";
             int len = sysProcessMax.Length;
-            foreach (ManagementBaseObject envVar in searcher.Get())
+            foreach (ManagementBaseObject envVar in searcher.Get())//Mohammad Yaser Ammar: third problem
             {
                 UInt64 tempVal = (UInt64)envVar["WorkingSetPrivate"];
                 String tempName = (String)envVar["Name"];

@@ -57,7 +57,7 @@ namespace WMI_Monitor_Csharp
             clearFormTempNumbers();
             initChartInfo();
             setAnalogClock();
-           // runOpenHardwareMonitor_Sensor(); //#todo Mohammad Yaser Ammar: fix 
+            runOpenHardwareMonitor_Sensor(); //Mohammad Yaser Ammar: second problem
             runWMI_Win32_OperatingSystem();
             runWMI_Win32_NetworkAdapterConfiguration();
             addFormListeners();
@@ -112,7 +112,7 @@ namespace WMI_Monitor_Csharp
         {
             setAnalogClock();
             runWMI_Win32_OperatingSystem();
-            // runOpenHardwareMonitor_Sensor(); //#todo Mohammad Yaser Ammar: fix 
+            runOpenHardwareMonitor_Sensor(); //Mohammad Yaser Ammar: second problem
             updateChartInfo();
             if (redrawForm) { resizeFormBackground(); }  
         }
