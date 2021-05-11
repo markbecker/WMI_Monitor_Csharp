@@ -65,7 +65,7 @@ The solution I think with Windows 10 is to download features of WMI and SNMP fro
 ![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%204%20when%20solve%20the%20third%20problem.png "Picture 4 when solve")
 
 I added a temporary solution with the error handling method through try and catch so that the program does not stop running in the event that a specific query is lost. As in the picture
-![alt text]( "try catch")
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20handling%20of%20error.png "try catch")
 
 
 ---
