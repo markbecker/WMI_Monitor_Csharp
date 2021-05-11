@@ -48,7 +48,38 @@ When opening the tool at the highest level it shows us blank information, but th
 
 To solve it, we will go through a series of steps to understand that, if you encounter a similar problem, dear reader and programmer, with WMI, how you think to solve it 🤔.
 
-We continue after the break 🌲
+We notice here, via the tool that examines the queries for that, that the query in the code does not exist basically as in the picture (I will explain the tool in the next section)
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%201%20when%20solve%20the%20third%20problem.png "Picture 1 when solve")
+
+When modifying to find the determinant by itself and a direct query is still the error, why?
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%202%20when%20solve%20the%20third%20problem.png "Picture 2 when solve")
+
+If we try in another system, for example Windows Server 2019, we notice that it works with the tool without problems, as well as if we run the program on it
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%203%20when%20solve%20the%20third%20problem.png "Picture 3 when solve")
+
+The solution I think with Windows 10 is to download features of WMI and SNMP from settings
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%204%20when%20solve%20the%20third%20problem.png "Picture 4 when solve")
+
+
+---
+# A utility for queries to WMI
+
+Using a utility to scan directly on Windows devices and for queries, are they present or not before checking the code.
+
+To enter it, run from the Windows button with the letter R.
+Then we call the field we want and inquire about the specific query as I explained in the picture
+![alt text](hhttps://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20helping%20tool.png "WMI tool")
+
+---
+The explanation of the program has been completed
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20about%20program.png "About program")
+
+
 
 ---
 My GitHub:  
