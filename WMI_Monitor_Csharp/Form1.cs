@@ -71,7 +71,7 @@ namespace WMI_Monitor_Csharp
             runWMI_Win32_OperatingSystem();
             runWMI_Win32_PhysicalMemory();
             runWMI_Win32_NetworkAdapterConfiguration();
-            //runWin32_PerfFormattedData_PerfProc_Process(); //Mohammad Yaser Ammar: third problem
+            runWin32_PerfFormattedData_PerfProc_Process(); //Mohammad Yaser Ammar: third problem
             addFormListeners();
             startupLocation();
             resizeFormBackground();
@@ -126,7 +126,7 @@ namespace WMI_Monitor_Csharp
             runWMI_Win32_OperatingSystem();
             runOpenHardwareMonitor_Sensor();
             runOpenHardwareMonitor_Hardware();
-            //runWin32_PerfFormattedData_PerfProc_Process(); //Mohammad Yaser Ammar: third problem
+            runWin32_PerfFormattedData_PerfProc_Process(); //Mohammad Yaser Ammar: third problem
             updateChartInfo();
             if (redrawForm) { resizeFormBackground(); }
         }
@@ -523,10 +523,20 @@ namespace WMI_Monitor_Csharp
             ramsize.Text = ramsizeStr;
         }
 
+
+        //New by: Mohammad Yaser Ammar
+        //The third problem is an error when running to the largest level: invalid quary
+        //#todo fix, There must be a solution to it, as it does not work on all Windows devices
+
         private void runWin32_PerfFormattedData_PerfProc_Process()
         {
             scope = new ManagementScope("\\root\\cimv2");
-            query = new SelectQuery("Win32_PerfFormattedData_PerfProc_Process");
+            //query = new SelectQuery("Win32_PerfFormattedData_PerfProc_Process");//Old invalid quary!
+
+            //New by: Mohammad Yaser Ammar
+
+            query = new SelectQuery("SELECT * FROM Win32_PerfFormattedData_PerfProc_Process WHERE Name= '_Total'");
+
             searcher = new ManagementObjectSearcher(scope, query);
             String[] sysProcess = { "", "", "", "", "" };
             UInt64[] sysProcessMax = { 0, 0, 0, 0, 0 };
@@ -741,7 +751,12 @@ namespace WMI_Monitor_Csharp
 
         private void buttonAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012");
+            //old
+            //MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012");
+
+            //New by: Mohammad Yaser Ammar
+            MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012\nFork by: Mohammad Yaser Ammar | May 2021"
+                ,"About program", MessageBoxButtons.OK, MessageBoxIcon.Information);
         } 
 
         private void FormLong_Resize(object sender, EventArgs e)

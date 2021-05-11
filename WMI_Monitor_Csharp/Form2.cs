@@ -513,7 +513,12 @@ namespace WMI_Monitor_Csharp
 
         private void buttonAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012");
+            //old
+            //MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012");
+
+            //New by: Mohammad Yaser Ammar
+            MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012\nFork by: Mohammad Yaser Ammar | May 2021"
+                , "About program", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FormShort_Resize(object sender, EventArgs e)
