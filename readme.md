@@ -20,7 +20,7 @@ The project from 2012 was therefore built on libraries that need to be changed o
 
   Do not worry, this is because the program version differed from 2010 to 2019, so the handling of libraries is a little different, the solution to this problem is simply to enter the library store (one of the advantages of Visual Studio 2019 is the ease of downloading and updating libraries) Store Picture of NuGet Packages we enter it like the image
 
-![alt text]( "Picture of first problem")
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20NuGet%20Packges.png "Picture of steps to open NuGet Packages")
 
 
 Then we are looking for download this library as in the picture
@@ -35,12 +35,20 @@ Then we are looking for download this library as in the picture
 
 Simply the first initial solution is to make a comment when calling the method to limit the problem
 
-alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20to%20inital%20solve%20the%20second%20problem.png "Picture of initial solve of second problem")
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20to%20inital%20solve%20the%20second%20problem.png "Picture of initial solve of second problem")
 
 ---
 3 - This problem is similar to the previous one, but I will explain the reasons for it because it depends on the device that the driver contains or not. 
 
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20the%20third%20problem.png "Picture of initial solve of third problem")
 
+When opening the tool at the highest level it shows us blank information, but this is with a comment of course
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20to%20inital%20solve%20the%20third%20problem.png "Picture of initial solve of third problem")
+
+To solve it, we will go through a series of steps to understand that, if you encounter a similar problem, dear reader and programmer, with WMI, how you think to solve it 🤔.
+
+We continue after the break 🌲
 
 ---
 My GitHub:  
