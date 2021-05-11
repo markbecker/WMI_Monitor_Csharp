@@ -14,9 +14,35 @@ The project from 2012 was therefore built on libraries that need to be changed o
 
 # Problems and method of fix
 
-1 - 
+1 - When opening the project for the first time, we get about 116 errors, as in the picture
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20the%20first%20problem.png "Picture of first problem")
+
+  Do not worry, this is because the program version differed from 2010 to 2019, so the handling of libraries is a little different, the solution to this problem is simply to enter the library store (one of the advantages of Visual Studio 2019 is the ease of downloading and updating libraries) Store Picture of NuGet Packages we enter it like the image
+
+![alt text]( "Picture of first problem")
 
 
+Then we are looking for download this library as in the picture
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20to%20solve%20the%20first%20problem.png "Picture to solve the first problem")
+
+
+---
+2 - Now with these problems is to modify the method of queries in the code because an error such as
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20the%20second%20problem.png "Picture to solve the second problem")
+
+Simply the first initial solution is to make a comment when calling the method to limit the problem
+
+alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20to%20inital%20solve%20the%20second%20problem.png "Picture of initial solve of second problem")
+
+---
+3 - This problem is similar to the previous one, but I will explain the reasons for it because it depends on the device that the driver contains or not. 
+
+
+
+---
 My GitHub:  
 [https://github.com/MohammadYAmmar](https://github.com/MohammadYAmmar)  
 My LinkedIn:  
