@@ -1,6 +1,41 @@
 <table border=0><tr><td valign="top">
 <h1>WMI_Monitor_Csharp</h1>
 A "System Monitor" project using "WMI" and "Open Hardware Monitor".<br />
+Written in C-sharp by Mark Becker in 2012, fork by Mohammad Yaser Ammar in 2021
+
+This project is my desire to experience developing my skills and supporting open source projects, this is the second project that I have been working on for GitHub!
+
+Project fork from:  [https://github.com/markbecker/WMI_Monitor_Csharp](https://github.com/markbecker/WMI_Monitor_Csharp)
+
+# Improvements
+
+**Correcting problems to run in 2021**  
+The project from 2012 was therefore built on libraries that need to be changed or updated, in addition to the nature of the system that was tried on Windows 7, but now this system has stopped supporting it, I have tried the changes to work in the best possible way with Windows 10.
+
+# Problems and method of fix
+
+1 - 
+
+
+My GitHub:  
+[https://github.com/MohammadYAmmar](https://github.com/MohammadYAmmar)  
+My LinkedIn:  
+[https://www.linkedin.com/in/mohammad-y-ammar/](https://www.linkedin.com/in/mohammad-y-ammar/)
+
+This site is nice for writing description [stackedit](https://stackedit.io/)
+
+
+Thank you for reading all of this to benefit you instead of just copying and pasting ✂!
+
+**The part in which Mohammad Yaser Ammar wrote has ended**
+
+
+
+## Description of the original project without modification:
+
+<table border=0><tr><td valign="top">
+<h1>WMI_Monitor_Csharp</h1>
+A "System Monitor" project using "WMI" and "Open Hardware Monitor".<br />
 Written in C-sharp by Mark Becker
 <hr>
 <ul>
