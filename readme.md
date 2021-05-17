@@ -77,7 +77,7 @@ Using a utility to scan directly on Windows devices and for queries, are they pr
 To enter it, run from the Windows button with the letter R.
 Then we call the field we want and inquire about the specific query as I explained in the picture
 
-![alt text](hhttps://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20helping%20tool.png "WMI tool")
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20helping%20tool.png "WMI tool")
 
 ---
 The explanation of the program has been completed
