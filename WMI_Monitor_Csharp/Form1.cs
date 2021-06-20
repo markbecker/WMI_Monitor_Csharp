@@ -46,6 +46,9 @@ namespace WMI_Monitor_Csharp
         float minuteEndPointX, minuteEndPointY;
         float secondEndPointX, secondEndPointY;
 
+        //New by: Mohammad Yaser Ammar
+        //public static bool only_one_box = true;
+
         public FormLong(int xPosInit, int yPosInit)
         {
             InitializeComponent();
@@ -71,7 +74,7 @@ namespace WMI_Monitor_Csharp
             runWMI_Win32_OperatingSystem();
             runWMI_Win32_PhysicalMemory();
             runWMI_Win32_NetworkAdapterConfiguration();
-            runWin32_PerfFormattedData_PerfProc_Process();
+            runWin32_PerfFormattedData_PerfProc_Process(); //Mohammad Yaser Ammar: third problem
             addFormListeners();
             startupLocation();
             resizeFormBackground();
@@ -126,7 +129,7 @@ namespace WMI_Monitor_Csharp
             runWMI_Win32_OperatingSystem();
             runOpenHardwareMonitor_Sensor();
             runOpenHardwareMonitor_Hardware();
-            runWin32_PerfFormattedData_PerfProc_Process();
+            runWin32_PerfFormattedData_PerfProc_Process(); //Mohammad Yaser Ammar: third problem
             updateChartInfo();
             if (redrawForm) { resizeFormBackground(); }
         }
@@ -523,50 +526,75 @@ namespace WMI_Monitor_Csharp
             ramsize.Text = ramsizeStr;
         }
 
+
+        //New by: Mohammad Yaser Ammar
+        //The third problem is an error when running to the largest level: invalid quary
+        //#todo fix, There must be a solution to it, as it does not work on all Windows devices
+
         private void runWin32_PerfFormattedData_PerfProc_Process()
         {
-            scope = new ManagementScope("\\root\\cimv2");
-            query = new SelectQuery("Win32_PerfFormattedData_PerfProc_Process");
-            searcher = new ManagementObjectSearcher(scope, query);
-            String[] sysProcess = { "", "", "", "", "" };
-            UInt64[] sysProcessMax = { 0, 0, 0, 0, 0 };
-            String outStr = "";
-            String outMaxStr = "";
-            int len = sysProcessMax.Length;
-            foreach (ManagementBaseObject envVar in searcher.Get())
+            //New by: Mohammad Yaser Ammar
+            //Add try, catch 
+            try
             {
-                UInt64 tempVal = (UInt64)envVar["WorkingSetPrivate"];
-                String tempName = (String)envVar["Name"];
-                if (!tempName.ToString().Equals("_Total"))
+                scope = new ManagementScope("\\root\\cimv2");
+                //query = new SelectQuery("Win32_PerfFormattedData_PerfProc_Process");//Old invalid quary!
+
+                //New by: Mohammad Yaser Ammar
+
+                query = new SelectQuery("SELECT * FROM Win32_PerfFormattedData_PerfProc_Process WHERE Name= '_Total'");
+
+                searcher = new ManagementObjectSearcher(scope, query);
+                String[] sysProcess = { "", "", "", "", "" };
+                UInt64[] sysProcessMax = { 0, 0, 0, 0, 0 };
+                String outStr = "";
+                String outMaxStr = "";
+                int len = sysProcessMax.Length;
+                foreach (ManagementBaseObject envVar in searcher.Get())//Mohammad Yaser Ammar: third problem
                 {
-                    int i = 0;
-                    Boolean test = true;
-                    while ((i < len) && test)
+                    UInt64 tempVal = (UInt64)envVar["WorkingSetPrivate"];
+                    String tempName = (String)envVar["Name"];
+                    if (!tempName.ToString().Equals("_Total"))
                     {
-                        if (tempVal > sysProcessMax[i])
+                        int i = 0;
+                        Boolean test = true;
+                        while ((i < len) && test)
                         {
-                            test = false;
-                            for (int j = len - 1; j > i; j--)
+                            if (tempVal > sysProcessMax[i])
                             {
-                                sysProcessMax[j] = sysProcessMax[(j - 1)];
-                                sysProcess[j] = sysProcess[(j - 1)];
+                                test = false;
+                                for (int j = len - 1; j > i; j--)
+                                {
+                                    sysProcessMax[j] = sysProcessMax[(j - 1)];
+                                    sysProcess[j] = sysProcess[(j - 1)];
+                                }
+                                sysProcessMax[i] = tempVal;
+                                sysProcess[i] = tempName;
                             }
-                            sysProcessMax[i] = tempVal;
-                            sysProcess[i] = tempName;
+                            i++;
                         }
-                        i++;
                     }
                 }
-            }
-            outStr = "1. " + sysProcess[0];
-            outMaxStr = "" + ((sysProcessMax[0] / 1024) / 1024) + " MB";
-            for (int i = 1; i < len; i++)
-            {
-                outStr += "\n\r" + i + ". " + sysProcess[i];
-                outMaxStr += "\n\r" + ((sysProcessMax[i] / 1024) / 1024) + " MB";
-            }
-            topsysname.Text = outStr;
-            topsysnum.Text = outMaxStr;
+                outStr = "1. " + sysProcess[0];
+                outMaxStr = "" + ((sysProcessMax[0] / 1024) / 1024) + " MB";
+                for (int i = 1; i < len; i++)
+                {
+                    outStr += "\n\r" + i + ". " + sysProcess[i];
+                    outMaxStr += "\n\r" + ((sysProcessMax[i] / 1024) / 1024) + " MB";
+                }
+                topsysname.Text = outStr;
+                topsysnum.Text = outMaxStr;
+                //New by: Mohammad Yaser Ammar
+                //Add try, catch 
+                 }catch(Exception ex)
+                {
+                //if (only_one_box)
+                //{
+                //    MessageBox.Show(ex.Message, "runWin32_PerfFormattedData_PerfProc_Process", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    only_one_box = false;
+                //}
+                Console.WriteLine(ex.Message + "runWin32_PerfFormattedData_PerfProc_Process");//for debug
+                }
         }
 
         private void runWMI_Win32_NetworkAdapterConfiguration()
@@ -741,7 +769,12 @@ namespace WMI_Monitor_Csharp
 
         private void buttonAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012");
+            //old
+            //MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012");
+
+            //New by: Mohammad Yaser Ammar
+            MessageBox.Show("System Monitor Application\nby Mark Becker\n© June 2012\nFork by: Mohammad Yaser Ammar | May 2021"
+                ,"About program", MessageBoxButtons.OK, MessageBoxIcon.Information);
         } 
 
         private void FormLong_Resize(object sender, EventArgs e)

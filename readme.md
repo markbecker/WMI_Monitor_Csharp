@@ -1,6 +1,113 @@
 <table border=0><tr><td valign="top">
 <h1>WMI_Monitor_Csharp</h1>
 A "System Monitor" project using "WMI" and "Open Hardware Monitor".<br />
+Written in C-sharp by Mark Becker in 2012, fork by Mohammad Yaser Ammar in 2021
+
+This project is my desire to experience developing my skills and supporting open source projects, this is the second project that I have been working on for GitHub!
+
+Project fork from:  [https://github.com/markbecker/WMI_Monitor_Csharp](https://github.com/markbecker/WMI_Monitor_Csharp)
+
+# Improvements
+
+**Correcting problems to run in 2021**  
+The project from 2012 was therefore built on libraries that need to be changed or updated, in addition to the nature of the system that was tried on Windows 7, but now this system has stopped supporting it, I have tried the changes to work in the best possible way with Windows 10.
+
+# Problems and method of fix
+
+1 - When opening the project for the first time, we get about 116 errors, as in the picture
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20the%20first%20problem.png "Picture of first problem")
+
+  Do not worry, this is because the program version differed from 2010 to 2019, so the handling of libraries is a little different, the solution to this problem is simply to enter the library store (one of the advantages of Visual Studio 2019 is the ease of downloading and updating libraries) Store Picture of NuGet Packages we enter it like the image
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20NuGet%20Packges.png "Picture of steps to open NuGet Packages")
+
+
+Then we are looking to download this library as in the picture
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20to%20solve%20the%20first%20problem.png "Picture to solve the first problem")
+
+
+---
+2 - Now with these problems is to modify the method of queries in the code because an error such as
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20the%20second%20problem.png "Picture to solve the second problem")
+
+Simply the first initial solution is to make a comment when calling the method to limit the problem
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20to%20inital%20solve%20the%20second%20problem.png "Picture of initial solve of second problem")
+
+---
+3 - This problem is similar to the previous one, but I will explain the reasons for it because it depends on the device that the driver contains or not. 
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20the%20third%20problem.png "Picture of initial solve of third problem")
+
+When opening the tool at the highest level it shows us blank information, but this is with a comment of course
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20to%20inital%20solve%20the%20third%20problem.png "Picture of initial solve of third problem")
+
+To solve it, we will go through a series of steps to understand that, if you encounter a similar problem, dear reader and programmer, with WMI, how you think to solve it 🤔.
+
+We notice here, via the tool that examines the queries for that, that the query in the code does not exist basically as in the picture (I will explain the tool in the next section)
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%201%20when%20solve%20the%20third%20problem.png "Picture 1 when solve")
+
+When modifying to find the determinant by itself and a direct query is still the error, why?
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%202%20when%20solve%20the%20third%20problem.png "Picture 2 when solve")
+
+If we try in another system, for example Windows Server 2019, we investigate that it works with the tool without problems, as well as if we run the program on it
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%203%20when%20solve%20the%20third%20problem.png "Picture 3 when solve")
+
+The solution I think with Windows 10 is to download features of WMI and SNMP from settings
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%204%20when%20solve%20the%20third%20problem.png "Picture 4 when solve")
+
+I added a temporary solution with the error handling method through try and catch so that the program does not stop running in the event that a specific query is lost. As in the picture
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20handling%20of%20error.png "try catch")
+
+
+---
+# A utility for queries to WMI
+
+Using a utility to scan directly on Windows devices and for queries, are they present or not before checking the code.
+
+To enter it, run from the Windows button with the letter R.
+Then we call the field we want and inquire about the specific query as I explained in the picture
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20helping%20tool.png "WMI tool")
+
+---
+The explanation of the program has been completed
+
+![alt text](https://github.com/MohammadYAmmar/WMI_Monitor_Csharp/blob/feature/Fix-to-run-in-2021/Picture%20of%20about%20program.png "About program")
+
+
+Soon I will add new features 🔜, so do not forget to follow the account and star to the repository ✔🌟😁
+
+---
+My GitHub:  
+[https://github.com/MohammadYAmmar](https://github.com/MohammadYAmmar)  
+My LinkedIn:  
+[https://www.linkedin.com/in/mohammad-y-ammar/](https://www.linkedin.com/in/mohammad-y-ammar/)
+
+This site is nice for writing description [stackedit](https://stackedit.io/)
+
+
+Thank you for reading all of this to benefit you instead of just copying and pasting ✂!
+
+**The part in which Mohammad Yaser Ammar wrote has ended**
+
+
+
+
+## Description of the original project without modification:
+
+<table border=0><tr><td valign="top">
+<h1>WMI_Monitor_Csharp</h1>
+A "System Monitor" project using "WMI" and "Open Hardware Monitor".<br />
 Written in C-sharp by Mark Becker
 <hr>
 <ul>

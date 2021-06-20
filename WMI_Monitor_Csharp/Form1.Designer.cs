@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLong));
             this.timerFast = new System.Windows.Forms.Timer(this.components);
             this.timerSlow = new System.Windows.Forms.Timer(this.components);
@@ -129,10 +129,10 @@
             this.rectangleShape8 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItemGoToShort = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemShowHide1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItemGoToShort = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -174,7 +174,8 @@
             this.buttonAbout.Name = "buttonAbout";
             this.buttonAbout.Size = new System.Drawing.Size(18, 18);
             this.buttonAbout.TabIndex = 7;
-            this.toolTipButton.SetToolTip(this.buttonAbout, "System Monitor Application\r\nby Mark Becker\r\n© June 2012");
+            this.toolTipButton.SetToolTip(this.buttonAbout, "System Monitor Application\nby Mark Becker\n© June 2012 \nFork by: Mohammad Yaser Am" +
+        "mar | May 2021");
             this.buttonAbout.UseVisualStyleBackColor = true;
             this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
@@ -542,7 +543,7 @@
             this.cpuname.Location = new System.Drawing.Point(6, 10);
             this.cpuname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpuname.Name = "cpuname";
-            this.cpuname.Size = new System.Drawing.Size(49, 15);
+            this.cpuname.Size = new System.Drawing.Size(91, 26);
             this.cpuname.TabIndex = 7;
             this.cpuname.Text = "cpuname";
             // 
@@ -565,7 +566,7 @@
             this.cpucoretemp.Location = new System.Drawing.Point(56, 55);
             this.cpucoretemp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpucoretemp.Name = "cpucoretemp";
-            this.cpucoretemp.Size = new System.Drawing.Size(67, 15);
+            this.cpucoretemp.Size = new System.Drawing.Size(125, 26);
             this.cpucoretemp.TabIndex = 1;
             this.cpucoretemp.Text = "cpucoretemp";
             this.cpucoretemp.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -589,7 +590,7 @@
             this.cpucorename.Location = new System.Drawing.Point(6, 55);
             this.cpucorename.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpucorename.Name = "cpucorename";
-            this.cpucorename.Size = new System.Drawing.Size(69, 15);
+            this.cpucorename.Size = new System.Drawing.Size(129, 26);
             this.cpucorename.TabIndex = 0;
             this.cpucorename.Text = "cpucorename";
             // 
@@ -635,7 +636,7 @@
             this.cputotaltemp.Location = new System.Drawing.Point(75, 32);
             this.cputotaltemp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cputotaltemp.Name = "cputotaltemp";
-            this.cputotaltemp.Size = new System.Drawing.Size(67, 15);
+            this.cputotaltemp.Size = new System.Drawing.Size(125, 26);
             this.cputotaltemp.TabIndex = 4;
             this.cputotaltemp.Text = "cputotaltemp";
             // 
@@ -648,7 +649,7 @@
             this.cputotalname.Location = new System.Drawing.Point(6, 32);
             this.cputotalname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cputotalname.Name = "cputotalname";
-            this.cputotalname.Size = new System.Drawing.Size(69, 15);
+            this.cputotalname.Size = new System.Drawing.Size(129, 26);
             this.cputotalname.TabIndex = 3;
             this.cputotalname.Text = "cputotalname";
             // 
@@ -661,7 +662,7 @@
             this.cpucorefreq.Location = new System.Drawing.Point(90, 55);
             this.cpucorefreq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpucorefreq.Name = "cpucorefreq";
-            this.cpucorefreq.Size = new System.Drawing.Size(62, 15);
+            this.cpucorefreq.Size = new System.Drawing.Size(116, 26);
             this.cpucorefreq.TabIndex = 6;
             this.cpucorefreq.Text = "cpucorefreq";
             this.cpucorefreq.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -792,7 +793,7 @@
             this.gpuname.Location = new System.Drawing.Point(6, 10);
             this.gpuname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gpuname.Name = "gpuname";
-            this.gpuname.Size = new System.Drawing.Size(50, 15);
+            this.gpuname.Size = new System.Drawing.Size(92, 26);
             this.gpuname.TabIndex = 9;
             this.gpuname.Text = "gpuname";
             // 
@@ -805,7 +806,7 @@
             this.gpucorefreq.Location = new System.Drawing.Point(55, 33);
             this.gpucorefreq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gpucorefreq.Name = "gpucorefreq";
-            this.gpucorefreq.Size = new System.Drawing.Size(63, 15);
+            this.gpucorefreq.Size = new System.Drawing.Size(117, 26);
             this.gpucorefreq.TabIndex = 10;
             this.gpucorefreq.Text = "gpucorefreq";
             this.gpucorefreq.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -819,7 +820,7 @@
             this.gpucoretemp.Location = new System.Drawing.Point(6, 33);
             this.gpucoretemp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gpucoretemp.Name = "gpucoretemp";
-            this.gpucoretemp.Size = new System.Drawing.Size(68, 15);
+            this.gpucoretemp.Size = new System.Drawing.Size(126, 26);
             this.gpucoretemp.TabIndex = 7;
             this.gpucoretemp.Text = "gpucoretemp";
             // 
@@ -881,67 +882,67 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
-            chartArea1.AxisX.LabelStyle.Enabled = false;
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            chartArea1.AxisX.LineColor = System.Drawing.SystemColors.ControlDark;
-            chartArea1.AxisX.MajorGrid.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
-            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Silver;
-            chartArea1.AxisY.IsLabelAutoFit = false;
-            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            chartArea1.AxisY.LineColor = System.Drawing.SystemColors.ControlDark;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
-            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Silver;
-            chartArea1.AxisY.Maximum = 100D;
-            chartArea1.AxisY.Minimum = 0D;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            chartArea1.Position.Auto = false;
-            chartArea1.Position.Height = 69.26087F;
-            chartArea1.Position.Width = 95F;
-            chartArea1.Position.Y = 3F;
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Alignment = System.Drawing.StringAlignment.Center;
-            legend1.AutoFitMinFontSize = 6;
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            legend1.IsDockedInsideChartArea = false;
-            legend1.IsTextAutoFit = false;
-            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.AxisX.LabelStyle.Enabled = false;
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            chartArea2.AxisX.LineColor = System.Drawing.SystemColors.ControlDark;
+            chartArea2.AxisX.MajorGrid.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
+            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Silver;
+            chartArea2.AxisY.IsLabelAutoFit = false;
+            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            chartArea2.AxisY.LineColor = System.Drawing.SystemColors.ControlDark;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
+            chartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Silver;
+            chartArea2.AxisY.Maximum = 100D;
+            chartArea2.AxisY.Minimum = 0D;
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            chartArea2.Position.Auto = false;
+            chartArea2.Position.Height = 69.26087F;
+            chartArea2.Position.Width = 95F;
+            chartArea2.Position.Y = 3F;
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Alignment = System.Drawing.StringAlignment.Center;
+            legend2.AutoFitMinFontSize = 6;
+            legend2.BackColor = System.Drawing.Color.Transparent;
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            legend2.IsDockedInsideChartArea = false;
+            legend2.IsTextAutoFit = false;
+            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(7, 10);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            series1.Legend = "Legend1";
-            series1.LegendText = "CPU";
-            series1.Name = "cpuchart";
-            series1.XValueMember = "XValue";
-            series1.YValueMembers = "CPUYValue";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series2.Color = System.Drawing.Color.RoyalBlue;
-            series2.Legend = "Legend1";
-            series2.LegendText = "GPU";
-            series2.Name = "gpuchart";
-            series2.XValueMember = "XValue";
-            series2.YValueMembers = "GPUYValue";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series3.Legend = "Legend1";
-            series3.LegendText = "RAM";
-            series3.Name = "memchart";
-            series3.XValueMember = "XValue";
-            series3.YValueMembers = "MEMYValue";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            series4.Legend = "Legend1";
+            series4.LegendText = "CPU";
+            series4.Name = "cpuchart";
+            series4.XValueMember = "XValue";
+            series4.YValueMembers = "CPUYValue";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series5.Color = System.Drawing.Color.RoyalBlue;
+            series5.Legend = "Legend1";
+            series5.LegendText = "GPU";
+            series5.Name = "gpuchart";
+            series5.XValueMember = "XValue";
+            series5.YValueMembers = "GPUYValue";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series6.Legend = "Legend1";
+            series6.LegendText = "RAM";
+            series6.Name = "memchart";
+            series6.XValueMember = "XValue";
+            series6.YValueMembers = "MEMYValue";
+            this.chart1.Series.Add(series4);
+            this.chart1.Series.Add(series5);
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(216, 77);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
@@ -992,7 +993,7 @@
             this.osramused.Location = new System.Drawing.Point(81, 10);
             this.osramused.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.osramused.Name = "osramused";
-            this.osramused.Size = new System.Drawing.Size(58, 15);
+            this.osramused.Size = new System.Drawing.Size(108, 26);
             this.osramused.TabIndex = 22;
             this.osramused.Text = "osramused";
             this.osramused.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1006,7 +1007,7 @@
             this.osramsize.Location = new System.Drawing.Point(6, 10);
             this.osramsize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.osramsize.Name = "osramsize";
-            this.osramsize.Size = new System.Drawing.Size(54, 15);
+            this.osramsize.Size = new System.Drawing.Size(100, 26);
             this.osramsize.TabIndex = 16;
             this.osramsize.Text = "osramsize";
             this.osramsize.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1021,7 +1022,7 @@
             this.ramname.Location = new System.Drawing.Point(9, 31);
             this.ramname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ramname.Name = "ramname";
-            this.ramname.Size = new System.Drawing.Size(37, 13);
+            this.ramname.Size = new System.Drawing.Size(73, 22);
             this.ramname.TabIndex = 18;
             this.ramname.Text = "ramname";
             // 
@@ -1048,7 +1049,7 @@
             this.ramfreq.Location = new System.Drawing.Point(171, 30);
             this.ramfreq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ramfreq.Name = "ramfreq";
-            this.ramfreq.Size = new System.Drawing.Size(31, 13);
+            this.ramfreq.Size = new System.Drawing.Size(60, 22);
             this.ramfreq.TabIndex = 21;
             this.ramfreq.Text = "ramfreq";
             this.ramfreq.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1064,7 +1065,7 @@
             this.ramsize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ramsize.Name = "ramsize";
             this.ramsize.Padding = new System.Windows.Forms.Padding(0, 0, 0, 7);
-            this.ramsize.Size = new System.Drawing.Size(33, 20);
+            this.ramsize.Size = new System.Drawing.Size(61, 29);
             this.ramsize.TabIndex = 20;
             this.ramsize.Text = "ramsize";
             this.ramsize.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1122,7 +1123,7 @@
             this.topsysnum.Location = new System.Drawing.Point(119, 33);
             this.topsysnum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.topsysnum.Name = "topsysnum";
-            this.topsysnum.Size = new System.Drawing.Size(58, 15);
+            this.topsysnum.Size = new System.Drawing.Size(108, 26);
             this.topsysnum.TabIndex = 13;
             this.topsysnum.Text = "topsysnum";
             this.topsysnum.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1136,7 +1137,7 @@
             this.memUsers.Location = new System.Drawing.Point(6, 10);
             this.memUsers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.memUsers.Name = "memUsers";
-            this.memUsers.Size = new System.Drawing.Size(101, 15);
+            this.memUsers.Size = new System.Drawing.Size(189, 26);
             this.memUsers.TabIndex = 12;
             this.memUsers.Text = "Top 5 Memory Users";
             // 
@@ -1149,7 +1150,7 @@
             this.topsysname.Location = new System.Drawing.Point(6, 33);
             this.topsysname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.topsysname.Name = "topsysname";
-            this.topsysname.Size = new System.Drawing.Size(62, 15);
+            this.topsysname.Size = new System.Drawing.Size(117, 26);
             this.topsysname.TabIndex = 11;
             this.topsysname.Text = "topsysname";
             // 
@@ -1207,7 +1208,7 @@
             this.hddname.Location = new System.Drawing.Point(6, 10);
             this.hddname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hddname.Name = "hddname";
-            this.hddname.Size = new System.Drawing.Size(50, 15);
+            this.hddname.Size = new System.Drawing.Size(92, 26);
             this.hddname.TabIndex = 10;
             this.hddname.Text = "hddname";
             // 
@@ -1220,7 +1221,7 @@
             this.hddfreespace.Location = new System.Drawing.Point(85, 10);
             this.hddfreespace.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hddfreespace.Name = "hddfreespace";
-            this.hddfreespace.Size = new System.Drawing.Size(68, 15);
+            this.hddfreespace.Size = new System.Drawing.Size(129, 26);
             this.hddfreespace.TabIndex = 13;
             this.hddfreespace.Text = "hddfreespace";
             this.hddfreespace.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1234,7 +1235,7 @@
             this.hddfreeprct.Location = new System.Drawing.Point(188, 10);
             this.hddfreeprct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hddfreeprct.Name = "hddfreeprct";
-            this.hddfreeprct.Size = new System.Drawing.Size(31, 15);
+            this.hddfreeprct.Size = new System.Drawing.Size(57, 26);
             this.hddfreeprct.TabIndex = 11;
             this.hddfreeprct.Text = "short";
             this.hddfreeprct.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1248,7 +1249,7 @@
             this.hddsize.Location = new System.Drawing.Point(135, 10);
             this.hddsize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hddsize.Name = "hddsize";
-            this.hddsize.Size = new System.Drawing.Size(43, 15);
+            this.hddsize.Size = new System.Drawing.Size(79, 26);
             this.hddsize.TabIndex = 12;
             this.hddsize.Text = "hddsize";
             this.hddsize.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1296,7 +1297,7 @@
             this.fanspeedmax.Location = new System.Drawing.Point(150, 10);
             this.fanspeedmax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fanspeedmax.Name = "fanspeedmax";
-            this.fanspeedmax.Size = new System.Drawing.Size(67, 15);
+            this.fanspeedmax.Size = new System.Drawing.Size(127, 26);
             this.fanspeedmax.TabIndex = 13;
             this.fanspeedmax.Text = "fanspeedmax";
             this.fanspeedmax.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1310,7 +1311,7 @@
             this.fanspeed.Location = new System.Drawing.Point(81, 10);
             this.fanspeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fanspeed.Name = "fanspeed";
-            this.fanspeed.Size = new System.Drawing.Size(48, 15);
+            this.fanspeed.Size = new System.Drawing.Size(91, 26);
             this.fanspeed.TabIndex = 12;
             this.fanspeed.Text = "fanspeed";
             this.fanspeed.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1324,7 +1325,7 @@
             this.fanname.Location = new System.Drawing.Point(6, 10);
             this.fanname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fanname.Name = "fanname";
-            this.fanname.Size = new System.Drawing.Size(46, 15);
+            this.fanname.Size = new System.Drawing.Size(86, 26);
             this.fanname.TabIndex = 11;
             this.fanname.Text = "fanname";
             // 
@@ -1360,44 +1361,45 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemGoToShort,
             this.toolStripSeparator1,
             this.toolStripMenuItemShowHide1,
             this.toolStripMenuItemExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(169, 98);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(279, 124);
+            // 
+            // toolStripMenuItemGoToShort
+            // 
+            this.toolStripMenuItemGoToShort.Name = "toolStripMenuItemGoToShort";
+            this.toolStripMenuItemGoToShort.Size = new System.Drawing.Size(278, 38);
+            this.toolStripMenuItemGoToShort.Text = "Go To Short Form";
+            this.toolStripMenuItemGoToShort.Click += new System.EventHandler(this.toolStripMenuItemGoToShort_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(275, 6);
             // 
             // toolStripMenuItemShowHide1
             // 
             this.toolStripMenuItemShowHide1.Name = "toolStripMenuItemShowHide1";
-            this.toolStripMenuItemShowHide1.Size = new System.Drawing.Size(168, 22);
+            this.toolStripMenuItemShowHide1.Size = new System.Drawing.Size(278, 38);
             this.toolStripMenuItemShowHide1.Text = "Show/Hide";
             this.toolStripMenuItemShowHide1.Click += new System.EventHandler(this.toolStripMenuItemShowHide_Click);
             // 
             // toolStripMenuItemExit
             // 
             this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
-            this.toolStripMenuItemExit.Size = new System.Drawing.Size(168, 22);
+            this.toolStripMenuItemExit.Size = new System.Drawing.Size(278, 38);
             this.toolStripMenuItemExit.Text = "Exit";
             this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
-            // 
-            // toolStripMenuItemGoToShort
-            // 
-            this.toolStripMenuItemGoToShort.Name = "toolStripMenuItemGoToShort";
-            this.toolStripMenuItemGoToShort.Size = new System.Drawing.Size(168, 22);
-            this.toolStripMenuItemGoToShort.Text = "Go To Short Form";
-            this.toolStripMenuItemGoToShort.Click += new System.EventHandler(this.toolStripMenuItemGoToShort_Click);
             // 
             // FormLong
             // 
             this.AccessibleName = "FormLong";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;

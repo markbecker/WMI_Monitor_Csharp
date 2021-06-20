@@ -114,7 +114,7 @@
             this.cpucorename.Location = new System.Drawing.Point(6, 25);
             this.cpucorename.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpucorename.Name = "cpucorename";
-            this.cpucorename.Size = new System.Drawing.Size(69, 15);
+            this.cpucorename.Size = new System.Drawing.Size(129, 26);
             this.cpucorename.TabIndex = 0;
             this.cpucorename.Text = "cpucorename";
             // 
@@ -127,7 +127,7 @@
             this.cpucoretemp.Location = new System.Drawing.Point(56, 25);
             this.cpucoretemp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpucoretemp.Name = "cpucoretemp";
-            this.cpucoretemp.Size = new System.Drawing.Size(67, 15);
+            this.cpucoretemp.Size = new System.Drawing.Size(125, 26);
             this.cpucoretemp.TabIndex = 1;
             this.cpucoretemp.Text = "cpucoretemp";
             this.cpucoretemp.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -209,7 +209,7 @@
             this.osramused.Location = new System.Drawing.Point(98, 118);
             this.osramused.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.osramused.Name = "osramused";
-            this.osramused.Size = new System.Drawing.Size(58, 15);
+            this.osramused.Size = new System.Drawing.Size(108, 26);
             this.osramused.TabIndex = 25;
             this.osramused.Text = "osramused";
             this.osramused.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -223,7 +223,7 @@
             this.osramsize.Location = new System.Drawing.Point(6, 118);
             this.osramsize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.osramsize.Name = "osramsize";
-            this.osramsize.Size = new System.Drawing.Size(54, 15);
+            this.osramsize.Size = new System.Drawing.Size(100, 26);
             this.osramsize.TabIndex = 24;
             this.osramsize.Text = "osramsize";
             this.osramsize.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -260,7 +260,7 @@
             this.gpucorefreq.Location = new System.Drawing.Point(64, 93);
             this.gpucorefreq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gpucorefreq.Name = "gpucorefreq";
-            this.gpucorefreq.Size = new System.Drawing.Size(63, 15);
+            this.gpucorefreq.Size = new System.Drawing.Size(117, 26);
             this.gpucorefreq.TabIndex = 17;
             this.gpucorefreq.Text = "gpucorefreq";
             this.gpucorefreq.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -287,7 +287,7 @@
             this.gpucoretemp.Location = new System.Drawing.Point(6, 93);
             this.gpucoretemp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gpucoretemp.Name = "gpucoretemp";
-            this.gpucoretemp.Size = new System.Drawing.Size(68, 15);
+            this.gpucoretemp.Size = new System.Drawing.Size(126, 26);
             this.gpucoretemp.TabIndex = 14;
             this.gpucoretemp.Text = "gpucoretemp";
             // 
@@ -350,7 +350,7 @@
             this.cpucorefreq.Location = new System.Drawing.Point(90, 25);
             this.cpucorefreq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpucorefreq.Name = "cpucorefreq";
-            this.cpucorefreq.Size = new System.Drawing.Size(62, 15);
+            this.cpucorefreq.Size = new System.Drawing.Size(116, 26);
             this.cpucorefreq.TabIndex = 6;
             this.cpucorefreq.Text = "cpucorefreq";
             this.cpucorefreq.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -377,7 +377,7 @@
             this.cputotalname.Location = new System.Drawing.Point(6, 10);
             this.cputotalname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cputotalname.Name = "cputotalname";
-            this.cputotalname.Size = new System.Drawing.Size(69, 15);
+            this.cputotalname.Size = new System.Drawing.Size(129, 26);
             this.cputotalname.TabIndex = 3;
             this.cputotalname.Text = "cputotalname";
             // 
@@ -390,7 +390,7 @@
             this.cputotaltemp.Location = new System.Drawing.Point(75, 10);
             this.cputotaltemp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cputotaltemp.Name = "cputotaltemp";
-            this.cputotaltemp.Size = new System.Drawing.Size(67, 15);
+            this.cputotaltemp.Size = new System.Drawing.Size(125, 26);
             this.cputotaltemp.TabIndex = 4;
             this.cputotaltemp.Text = "cputotaltemp";
             // 
@@ -496,7 +496,8 @@
             this.buttonAbout.Name = "buttonAbout";
             this.buttonAbout.Size = new System.Drawing.Size(18, 18);
             this.buttonAbout.TabIndex = 8;
-            this.toolTipButton.SetToolTip(this.buttonAbout, "System Monitor Application\r\nby Mark Becker\r\n© June 2012");
+            this.toolTipButton.SetToolTip(this.buttonAbout, "System Monitor Application\nby Mark Becker\n© June 2012 \nFork by: Mohammad Yaser Am" +
+        "mar | May 2021");
             this.buttonAbout.UseVisualStyleBackColor = true;
             this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
@@ -814,44 +815,45 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemGoToLong,
             this.toolStripSeparator1,
             this.toolStripMenuItemShowHide,
             this.toolStripMenuItemExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(168, 98);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(275, 124);
             // 
             // toolStripMenuItemGoToLong
             // 
             this.toolStripMenuItemGoToLong.Name = "toolStripMenuItemGoToLong";
-            this.toolStripMenuItemGoToLong.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItemGoToLong.Size = new System.Drawing.Size(274, 38);
             this.toolStripMenuItemGoToLong.Text = "Go To Long Form";
             this.toolStripMenuItemGoToLong.Click += new System.EventHandler(this.toolStripMenuItemGoToLong_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(164, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(271, 6);
             // 
             // toolStripMenuItemShowHide
             // 
             this.toolStripMenuItemShowHide.Name = "toolStripMenuItemShowHide";
-            this.toolStripMenuItemShowHide.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItemShowHide.Size = new System.Drawing.Size(274, 38);
             this.toolStripMenuItemShowHide.Text = "Show/Hide";
             this.toolStripMenuItemShowHide.Click += new System.EventHandler(this.toolStripMenuItemShowHide_Click);
             // 
             // toolStripMenuItemExit
             // 
             this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
-            this.toolStripMenuItemExit.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItemExit.Size = new System.Drawing.Size(274, 38);
             this.toolStripMenuItemExit.Text = "Exit";
             this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
             // 
             // FormShort
             // 
             this.AccessibleName = "FormShort";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
